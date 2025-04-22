@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: black;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+a {
+  color: #0ff;
+  text-decoration: none;
+}
+
+#stars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  /* background: url(images/background.jpg); */
+  background-size: cover;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: slideDown 1s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+nav a {
+  margin: 0 1rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.brand {
+  font-family: "Monoton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0 1rem;
+  font-weight: bold;
+  transition: 0.3s;
+  font-size: 45px;
+}
+
+nav a:hover,
+.brand:hover {
+  color: cyan;
+  text-shadow: 0 0 5px cyan;
+}
+
+.intro {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.intro-content {
+  animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #0ff;
+  }
+
+  to {
+    text-shadow: 0 0 30px #0ff;
+  }
+}
+
+.intro h1 {
+  font-size: 3rem;
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: 0.15em solid #fff;
+  white-space: nowrap;
+  animation: typing 4s steps(30, end), blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.intro img {
+  width: 250px;
+  height: 250px;
+  margin-top: 1rem;
+}
+
+section {
+  padding: 4rem 2rem;
+  color: #fff !important;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 0 0 10px #0ff;
+  color: #fff !important;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid #0ff !important;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 20px #0ff88f80;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  color: #fff !important;
+}
+
+.card:hover {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 0 30px #f0f;
+}
+
+.card h3,
+.card p,
+.card a {
+  color: #fff !important;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #111;
+  color: #fff !important;
+}
+
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: auto;
+  gap: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #444;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 250px;
+  color: #fff !important;
+}
+
+.footer-left h3,
+.footer-right h3 {
+  color: #0ff !important;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 5px #0ff;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-links a,
+.projects {
+  color: #0ff !important;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #f0f !important;
+  text-shadow: 0 0 10px #f0f;
+}
+
+.projects:hover {
+  color: #f0f !important;
+  text-shadow: 0 0 10px #f0f;
+}
+
+.resume-btn {
+  display: inline-block;
+  background: #0ff !important;
+  color: #000 !important;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.resume-btn:hover {
+  background: #f0f !important;
+  color: #000 !important;
+  box-shadow: 0 0 10px #f0f;
+}
+
+.abt-para {
+  font-size: 20px;
+}
